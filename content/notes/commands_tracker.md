@@ -100,4 +100,4 @@ du -sh /path/to/folder
 
   
 
-- `-h`: Displays sizes in human-readable format..
+- `-h`: Displays sizes in human-readable format.

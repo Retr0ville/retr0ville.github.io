@@ -12,13 +12,13 @@ function exec(event) {
   element = is_viewer ? document.getElementById("content") : element;
 
   if (event.shiftKey) {
-    if (
-      typeof keys.shortcut != "undefined" &&
-      typeof keys.shortcut[key] === "function"
-    ) {
-      keys.shortcut[key](event, element);
-      return;
-    }
+    // if (
+    //   typeof keys.shortcut != "undefined" &&
+    //   typeof keys.shortcut[key] === "function"
+    // ) {
+    //   keys.shortcut[key](event, element);
+    //   return;
+    // }
 
     switch (key) {
       case "l":
