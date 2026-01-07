@@ -40,13 +40,13 @@ function exec(event) {
         break;
     }
   } else {
-    if (
-      typeof keys.normal != "undefined" &&
-      typeof keys.normal[key] === "function"
-    ) {
-      keys.normal[key](event, element);
-      return;
-    }
+    // if (
+    //   typeof keys.normal != "undefined" &&
+    //   typeof keys.normal[key] === "function"
+    // ) {
+    //   keys.normal[key](event, element);
+    //   return;
+    // }
 
     switch (key) {
       case "escape":
