@@ -1,6 +1,4 @@
 let cursor;
-window.keys = window.keys || { normal: {}, shortcut: {} };
-window.commands = window.commands || {};
 window.onload = init;
 
 async function init() {
