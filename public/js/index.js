@@ -1,4 +1,6 @@
 let cursor;
+const keys = { normal: {}, shortcut: {} };
+const commands = {};
 window.onload = init;
 
 async function init() {

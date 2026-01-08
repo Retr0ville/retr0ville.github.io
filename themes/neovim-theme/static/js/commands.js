@@ -6,12 +6,12 @@ function command() {
   input.shift();
   const args = input.join("").replace(" ", "").split("=");
 
-  // if (
-  //   typeof commands != "undefined" &&
-  //   typeof commands[command] === "function"
-  // ) {
-  //   commands[command](command);
-  // }
+  if (
+    typeof commands != "undefined" &&
+    typeof commands[command] === "function"
+  ) {
+    commands[command](command);
+  }
 
   switch (command) {
     case "help":

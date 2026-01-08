@@ -12,13 +12,13 @@ function exec(event) {
   element = is_viewer ? document.getElementById("content") : element;
 
   if (event.shiftKey) {
-    // if (
-    //   typeof keys.shortcut != "undefined" &&
-    //   typeof keys.shortcut[key] === "function"
-    // ) {
-    //   keys.shortcut[key](event, element);
-    //   return;
-    // }
+    if (
+      typeof keys.shortcut != "undefined" &&
+      typeof keys.shortcut[key] === "function"
+    ) {
+      keys.shortcut[key](event, element);
+      return;
+    }
 
     switch (key) {
       case "l":
@@ -40,13 +40,13 @@ function exec(event) {
         break;
     }
   } else {
-    // if (
-    //   typeof keys.normal != "undefined" &&
-    //   typeof keys.normal[key] === "function"
-    // ) {
-    //   keys.normal[key](event, element);
-    //   return;
-    // }
+    if (
+      typeof keys.normal != "undefined" &&
+      typeof keys.normal[key] === "function"
+    ) {
+      keys.normal[key](event, element);
+      return;
+    }
 
     switch (key) {
       case "escape":
