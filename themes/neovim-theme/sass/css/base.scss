@@ -4,14 +4,14 @@
 }
 
 :root {
-  --bg-color: rgba(32, 32, 42, 0.8);
-  --font-color: #cdd6f4;
+  --bg-color: rgb(0 0 0 / 93%);
+  --font-color: #fb5;
 }
 
 /* Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #dc8add var(--bg-color);
+  scrollbar-color: #ff9900ed var(--bg-color);
 }
 
 html {
@@ -113,11 +113,8 @@ body {
 
 main {
   overflow: clip;
-  height: 98vh;
-  width: 98vw;
-  margin-top: 1vh;
-  margin-left: 1vw;
-  border-radius: 20px;
+  height: 100vh;
+  width: 100vw;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -221,8 +218,8 @@ main {
       h1,
       a,
       a::before {
-        color: #82aaff;
-        content: '󰌹 ';
+        color: #21c307;
+        content: "󰌹 ";
       }
 
       h1::before {
