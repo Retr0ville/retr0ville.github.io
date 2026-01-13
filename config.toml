@@ -38,4 +38,4 @@ blog_name = "Rtrvl's Log"
 # config_js = "config.js"
 
 # allow you to include custom css into your blog
-custom_css = "/css/custom.css"
+# custom_css = "/css/custom.css"

@@ -2,14 +2,25 @@
   font-family: JetBrainsMono;
   src: url("/JetBrainsMonoNLNerdFont-Regular.ttf");
 }
-:root {
+/* :root {
   --bg-color: rgba(32, 32, 42, 0.8);
   --font-color: #cdd6f4;
+} */
+:root {
+  --bg-color: rgb(0 0 0 / 93%);
+  --font-color: #fb5;
 }
-* {
+
+/* * {
   scrollbar-width: thin;
   scrollbar-color: #dc8add var(--bg-color);
+} */
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #ff9900ed var(--bg-color);
 }
+
 html {
   color: var(--font-color);
   font-family: JetBrainsMono;
@@ -91,7 +102,7 @@ body {
     display: none;
   }
 }
-main {
+/* main {
   overflow: clip;
   height: 98vh;
   width: 98vw;
@@ -104,7 +115,20 @@ main {
   justify-content: space-between;
   background-color: var(--bg-color);
   backdrop-filter: blur(5px);
+} */
+
+main {
+  overflow: clip;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--bg-color);
+  backdrop-filter: blur(5px);
 }
+
 main .files ul {
   list-style-type: none;
 }
@@ -183,12 +207,20 @@ main .viewer .content ul.section a::before {
 main .viewer .content li.section a::before {
   content: " ";
 }
-main .viewer .content h1,
+/* main .viewer .content h1,
 main .viewer .content a,
 main .viewer .content a::before {
   color: #82aaff;
   content: "󰌹 ";
+} */
+
+main .viewer .content h1,
+main .viewer .content a,
+main .viewer .content a::before {
+  color: #21c307;
+  content: "󰌹 ";
 }
+
 main .viewer .content h1::before {
   content: "󰲡 ";
 }
