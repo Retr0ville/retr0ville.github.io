@@ -64,7 +64,7 @@ Will unmount the file-system at `/dev/sda1/`
 
 ## rsync
 
-rsync is a file transfer program capable of efficient local or remote trasnfer operations via a fast differencing algorithm.
+rsync is a file transfer program capable of efficient local or remote transfer operations via a fast differencing algorithm.
 
 ```bash
 rsync -av /mnt/Downloads /home/rtrvl/Downloads/
