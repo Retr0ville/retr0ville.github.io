@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -34,6 +34,20 @@
       src="https://retr0ville.github.io/Rtrvls-Log/js/config.js"
       defer
     ></script>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-CQVYPXQ5RR"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-CQVYPXQ5RR");
+    </script>
     <link
       rel="stylesheet"
       href="https://retr0ville.github.io/Rtrvls-Log/css/base.css"
@@ -47,7 +61,7 @@
   <body
     onkeydown="exec(event)"
     style="
-      background-image: url('https://retr0ville.github.io/Rtrvls-Log/assets/background.jpg');
+      background-image: url(&quot;https://retr0ville.github.io/Rtrvls-Log/assets/background.jpg&quot;);
     "
   >
     <main>
@@ -91,7 +105,10 @@
         <div class="tab">
           <div
             class="file-manager"
-            onclick='document.getElementById("files").classList.toggle("open"); document.getElementById("content").classList.toggle("close")'
+            onclick="
+              document.getElementById('files').classList.toggle('open');
+              document.getElementById('content').classList.toggle('close');
+            "
           >
             
           </div>
@@ -142,10 +159,13 @@
         <input
           type="text"
           id="setter"
-          onkeydown="writeit(this, event);moveIt(this.value.length, event)"
+          onkeydown="
+            writeit(this, event);
+            moveIt(this.value.length, event);
+          "
           onchange="writeit(this, event)"
           onkeyup="writeit(this, event)"
-          onkeypress="writeit(this, event);"
+          onkeypress="writeit(this, event)"
         />
         <label for="setter" id="writer"> </label
         ><b class="cursor" id="cursor"></b>
