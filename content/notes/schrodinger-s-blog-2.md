@@ -36,6 +36,7 @@ That and I've made ample headway in [Clair Obscur](https://en.wikipedia.org/wiki
 <img src="../the-mothers.png" alt="Why am i here again? oh right the murders / James Holmes :: trial ..." style="zoom:75%;" />
 
 *Ah right the actual "important stuff",* 
+
 I've tried and failed multiple time to pick up the C# programming language. My todo list would probably read like a broken record with all the "Learn C#" entries it contains.
 
 And it's not even because its that hard to learn but because its just an uber boring language, probably by design. I could be viewing it from a wrong perspective though.
