@@ -20,7 +20,7 @@ Too much of a perfectionist to get anything done!
 I've just realized blogging isn't so easy as people like [mrusme](https://xn--gckvb8fzb.com/) makes it seem, Them words don't magically appear on the webpages.
 > side note: We pretend like its 2016  and gen AI doesn't exist...
 
-![image-20260123041818799](late-time.png)
+![image-20260123041818799](../late-time.png)
 
 > And while we're at it can we also pretend it 11pm and I've got ample time to have a good night rest :-).
 
@@ -30,7 +30,7 @@ Anyways I digress, And I think this section should more aptly be named what will
 
 That and I've made ample headway in [Clair Obscur](https://en.wikipedia.org/wiki/Clair_Obscur:_Expedition_33), I see where all the GOTY hype was coming from.
 
-<img src="the-mothers" alt="Why am i here again? oh right the murders / James Holmes :: trial ..." style="zoom:50%;" />
+<img src="../the-mothers" alt="Why am i here again? oh right the murders / James Holmes :: trial ..." style="zoom:50%;" />
 
 *Ah right the actual "important stuff",*  I've tried and failed multiple time to pick up the C# programming language. My todo list would probably read like a broken record with all the "Learn C#" entries it contains.
 
@@ -78,7 +78,7 @@ We'll see how that one goes.
 
 
 
-![image-20260123052041822](500-words)
+![image-20260123052041822](../500-words)
 
 Look at that we're 500 words in already.. maybe the words actually do magically appear on the webpages afterall.
 
