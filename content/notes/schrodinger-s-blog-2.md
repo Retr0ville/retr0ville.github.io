@@ -59,7 +59,7 @@ But whatever the case, and as far as my personal experience goes, I'd say the mo
 
 Some other things I plan on achieving in the coming weeks are
 
-#### Contributing to the Zen browser
+### Contributing to the Zen browser
 
 Over at [Zen](https://github.com/zen-browser/desktop/issues).
 
@@ -67,13 +67,13 @@ I've always wanted to do some proper open source.
 
 
 
-#### Adding some proper article categories to the blog
+### Adding some proper article categories to the blog
 
 Nobody likes a flat file-system.
 
 
 
-#### Setup a decent Tilde homepage
+### Setup a decent Tilde homepage
 
 I'm still not completely sure what I'd be needing it for but we move regardless.
 
@@ -81,7 +81,7 @@ I'm still not completely sure what I'd be needing it for but we move regardless.
 
 
 
-#### Weekly blog entry ?
+### Weekly blog entry ?
 
 We'll see how that one goes.
 
