@@ -152,6 +152,10 @@ main {
       overflow-x: clip;
       margin-top: 3px;
 
+      p {
+        line-height: 165%;
+      }
+
       a:hover,
       .selected {
         background-color: rgba(66, 135, 245, 0.5) !important;
