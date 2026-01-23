@@ -1,5 +1,5 @@
 +++
-title=Schrodinger's Blog
+title="Schrodinger's Blog"
 slug=schrodinger-s-blog
 +++
 
