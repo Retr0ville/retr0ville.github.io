@@ -33,7 +33,7 @@ Anyways I digress, And I think this section should more aptly be named what will
 
 That and I've made ample headway in [Clair Obscur](https://en.wikipedia.org/wiki/Clair_Obscur:_Expedition_33), I see where all the GOTY hype was coming from.
 
-<img src="../the-mothers.png" alt="Why am i here again? oh right the murders / James Holmes :: trial ..." style="zoom:50%;" />
+<img src="../the-mothers.png" alt="Why am i here again? oh right the murders / James Holmes :: trial ..." style="zoom:75%;" />
 
 *Ah right the actual "important stuff",*  I've tried and failed multiple time to pick up the C# programming language. My todo list would probably read like a broken record with all the "Learn C#" entries it contains.
 
