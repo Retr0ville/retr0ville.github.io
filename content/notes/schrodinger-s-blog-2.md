@@ -1,6 +1,6 @@
 +++
 title="Schrodinger's Blog"
-slug=schrodinger-s-blog
+slug="schrodinger-s-blog"
 +++
 
 # I've been stuck here a while
