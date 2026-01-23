@@ -12,8 +12,11 @@ Too much of a perfectionist to get anything done!
 
 ## Table of content
 
-
-[TOC]
+* [What have I been up to](#what-have-i-been-up-to)
+* [Contributing to the Zen browser](#contributing-to-the-zen-browser)
+* [Adding some proper article categories to the blog](#adding-some-proper-article-categories-to-the-blog)
+* [Setup a decent Tilde homepage](#setup-a-decent-tilde-homepage)
+* [Weekly blog entry ?](#weekly-blog-entry-)
 
 ## What have I been up to
 
