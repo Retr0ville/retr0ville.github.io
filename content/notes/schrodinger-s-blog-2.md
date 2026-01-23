@@ -57,7 +57,7 @@ But whatever the case, and as far as my personal experience goes, I'd say the mo
 
 
 
-Some other things I plan on achieving in the coming weeks are
+Some other things I plan on achieving in the coming weeks \ months
 
 ### Contributing to the Zen browser
 
