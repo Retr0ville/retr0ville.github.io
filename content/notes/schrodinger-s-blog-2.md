@@ -22,6 +22,10 @@ Too much of a perfectionist to get anything done!
 
 * [Weekly blog entry ?](#weekly-blog-entry)
 
+> >
+> >
+> >
+
 ## What have I been up to
 
 I've just realized blogging isn't so easy as people like [mrusme](https://xn--gckvb8fzb.com/) makes it seem, Them words don't magically appear on the webpages.
