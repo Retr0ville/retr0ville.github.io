@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rtrvl&#x27;s Log</title>
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"
+    integrity="sha256-WCzAhd2P6gRJF9Hv3oOOd+hFJi/QJbv+Azn4CGB8gfY=" crossorigin="anonymous" defer></script>
+  <script src="/js/index.js" defer></script>
+  <script src="/js/prompt.js" defer></script>
+  <script src="/js/keyboard.js" defer></script>
+  <script src="/js/tab.js" defer></script>
+  <script src="/js/commands.js" defer></script>
+  <script src="/js/config.js" defer></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CQVYPXQ5RR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-CQVYPXQ5RR');
+  </script><link rel="stylesheet" href="/css/base.css"><link rel="stylesheet" href="/css/page.css"></head><body onkeydown='exec(event)' style='background-image: url("/assets/background.jpg");'><main>
+      <div class="files" id="files" tabindex="0">
+<ul>
+
+  <li class="file">
+    <span><a href='https://retr0ville.github.io/readme/'
+      tabindex="-2">  README</a></span>
+  </li>
+
+<li class="folder"><span>
+      
+      <a href='https://retr0ville.github.io/articles/'
+        tabindex="-3">  Articles
+      </a>
+    </span>
+
+    <ul>
+      
+      
+        
+        
+          
+          
+<li>
+<span>└──
+  
+  <a href='https://retr0ville.github.io/articles/2026/'
+    tabindex="-4">  2026
+  </a>
+</span>
+
+
+  <ul>
+
+  
+  <li class="file">
+    <span>└──
+      <a href='https://retr0ville.github.io/articles/2026/february-reads/'
+        tabindex="-5">  February Reads</a>
+    </span>
+  </li></ul>
+</li>
+
+        
+    </ul>
+  </li><li class="folder"><span>
+      
+      <a href='https://retr0ville.github.io/notes/'
+        tabindex="-6">  Notes
+      </a>
+    </span>
+
+    <ul>
+      
+      <li class="file">
+        <span>└──
+          <a href='https://retr0ville.github.io/notes/alienware-keyboard-driver-fix/'
+            tabindex="-7">  Alienware Keyboard Driver Fix</a>
+        </span>
+      </li><li class="file">
+        <span>└──
+          <a class="selected"href='https://retr0ville.github.io/notes/commands-tracker/'
+            tabindex="-8">  Commands&#x2F;Shortcuts Tracker</a>
+        </span>
+      </li><li class="file">
+        <span>└──
+          <a href='https://retr0ville.github.io/notes/schrodinger-s-blog/'
+            tabindex="-9">  Schrodinger&#x27;s Blog</a>
+        </span>
+      </li>
+        
+    </ul>
+  </li>
+</ul>
+</div>
+      <div class="viewer page" id="viewer" tabindex="0">
+        <div class="tab">
+<div class="file-manager" onclick='document.getElementById("files").classList.toggle("open"); document.getElementById("content").classList.toggle("close")'> </div>
+<ul id="tabs">
+</ul>
+
+
+</div>
+        <div class="content" id="content"><h1 id="commands-tracker">COMMANDS TRACKER</h1>
+<blockquote>
+<p>This file is to help me keep track of useful utility commands as I journey into Linux Land.</p>
+<p>Think of it as a breadcrumb trail if you will.</p>
+</blockquote>
+<h2 id="table-of-content">Table of content</h2>
+<ul>
+<li>
+<p><a href="https://retr0ville.github.io/notes/commands-tracker/#ntfsfix">1. ntfsfix</a></p>
+</li>
+<li>
+<p><a href="https://retr0ville.github.io/notes/commands-tracker/#mount">2. mount</a></p>
+</li>
+<li>
+<p><a href="https://retr0ville.github.io/notes/commands-tracker/#umount">3. umount</a></p>
+</li>
+<li>
+<p><a href="https://retr0ville.github.io/notes/commands-tracker/#rsync">4. rsync</a></p>
+</li>
+<li>
+<p><a href="https://retr0ville.github.io/notes/commands-tracker/#df">5. df</a></p>
+</li>
+<li>
+<p><a href="https://retr0ville.github.io/notes/commands-tracker/#du">6. du</a></p>
+</li>
+</ul>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+<h2 id="ntfsfix">ntfsfix</h2>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">sudo</span><span style="color: #A6E3A1;"> ntfsfix /dev/sda1</span></span></code></pre>
+<p>I have somehow managed to crash the file-system of my HDD and now it refuses to mount on <code>/dev/sda1</code> , this nifty command comes to the rescue.</p>
+<p>exact error text 👉🏽</p>
+<blockquote>
+<p>Error mounting /dev/sda1/ at /run/media : wrong fs type, bad option, bad superblock on /dev/sda1, missing codepage or helper program, or other error.</p>
+</blockquote>
+<h2 id="mount">mount</h2>
+<p>All files accessible in a Unix system are arranged in one big tree, the file hierarchy, rooted at /. These files can be spread out over several devices. The mount command serves to attach the file-system found on some external device, like a hard drive to the big file tree so its content can be accessible.</p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">sudo</span><span style="color: #A6E3A1;"> mount /dev/sda1 /mnt -t auto</span></span></code></pre>
+<p>The above command will mount the device <code>sda1</code> on your <code>/mnt</code> folde- ..I mean directory.</p>
+<h2 id="umount">umount</h2>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">sudo</span><span style="color: #A6E3A1;"> umount /dev/sda1</span></span></code></pre>
+<p>Will unmount the file-system at <code>/dev/sda1/</code></p>
+<h2 id="rsync">rsync</h2>
+<p>rsync is a file transfer program capable of efficient local or remote transfer operations via a fast differencing algorithm.</p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">rsync</span><span style="color: #A6E3A1;"> -av /mnt/Downloads /home/rtrvl/Downloads/</span></span></code></pre>
+<p>This would copy all files from <code>/mnt/Downloads</code> into <code>/home/rtrvl/Downloads/</code></p>
+<h2 id="df">df</h2>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">df</span><span style="color: #A6E3A1;"> -h</span></span></code></pre>
+<p>Will list all mounted file systems.</p>
+<p>Sample Output 👇🏽</p>
+<p><img src="../image-20250903150747369.png" alt="image-20250903150747369" /></p>
+<h2 id="du">du</h2>
+<p><code>du</code> is the disk usage command</p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">du</span><span style="color: #A6E3A1;"> -sh /path/to/folder</span></span></code></pre>
+<ul>
+<li>
+<p><code>-s</code>: Summarizes the disk usage of the specified directory, rather than listing sizes of individual subdirectories and files within it.</p>
+</li>
+<li>
+<p><code>-h</code>: Displays sizes in human-readable format.</p>
+</li>
+</ul>
+
+        </div>
+      </div>
+      <div class="prompt" id="terminal"><input
+    type="text"
+    id="setter"
+    onkeydown="writeit(this, event);moveIt(this.value.length, event)"
+    onchange="writeit(this, event)"
+    onkeyup="writeit(this, event)"
+    onkeypress="writeit(this, event);"
+    >
+<label for="setter" id="writer"> </label><b class="cursor" id="cursor"></b></div>
+    </main>
+  </body>
+
+</html>

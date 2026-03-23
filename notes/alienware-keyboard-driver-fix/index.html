@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rtrvl&#x27;s Log</title>
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"
+    integrity="sha256-WCzAhd2P6gRJF9Hv3oOOd+hFJi/QJbv+Azn4CGB8gfY=" crossorigin="anonymous" defer></script>
+  <script src="/js/index.js" defer></script>
+  <script src="/js/prompt.js" defer></script>
+  <script src="/js/keyboard.js" defer></script>
+  <script src="/js/tab.js" defer></script>
+  <script src="/js/commands.js" defer></script>
+  <script src="/js/config.js" defer></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CQVYPXQ5RR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-CQVYPXQ5RR');
+  </script><link rel="stylesheet" href="/css/base.css"><link rel="stylesheet" href="/css/page.css"></head><body onkeydown='exec(event)' style='background-image: url("/assets/background.jpg");'><main>
+      <div class="files" id="files" tabindex="0">
+<ul>
+
+  <li class="file">
+    <span><a href='https://retr0ville.github.io/readme/'
+      tabindex="-2">  README</a></span>
+  </li>
+
+<li class="folder"><span>
+      
+      <a href='https://retr0ville.github.io/articles/'
+        tabindex="-3">  Articles
+      </a>
+    </span>
+
+    <ul>
+      
+      
+        
+        
+          
+          
+<li>
+<span>└──
+  
+  <a href='https://retr0ville.github.io/articles/2026/'
+    tabindex="-4">  2026
+  </a>
+</span>
+
+
+  <ul>
+
+  
+  <li class="file">
+    <span>└──
+      <a href='https://retr0ville.github.io/articles/2026/february-reads/'
+        tabindex="-5">  February Reads</a>
+    </span>
+  </li></ul>
+</li>
+
+        
+    </ul>
+  </li><li class="folder"><span>
+      
+      <a href='https://retr0ville.github.io/notes/'
+        tabindex="-6">  Notes
+      </a>
+    </span>
+
+    <ul>
+      
+      <li class="file">
+        <span>└──
+          <a class="selected"href='https://retr0ville.github.io/notes/alienware-keyboard-driver-fix/'
+            tabindex="-7">  Alienware Keyboard Driver Fix</a>
+        </span>
+      </li><li class="file">
+        <span>└──
+          <a href='https://retr0ville.github.io/notes/commands-tracker/'
+            tabindex="-8">  Commands&#x2F;Shortcuts Tracker</a>
+        </span>
+      </li><li class="file">
+        <span>└──
+          <a href='https://retr0ville.github.io/notes/schrodinger-s-blog/'
+            tabindex="-9">  Schrodinger&#x27;s Blog</a>
+        </span>
+      </li>
+        
+    </ul>
+  </li>
+</ul>
+</div>
+      <div class="viewer page" id="viewer" tabindex="0">
+        <div class="tab">
+<div class="file-manager" onclick='document.getElementById("files").classList.toggle("open"); document.getElementById("content").classList.toggle("close")'> </div>
+<ul id="tabs">
+</ul>
+
+
+</div>
+        <div class="content" id="content"><h1 id="alienware-keyboard-driver-fix">Alienware Keyboard Driver Fix</h1>
+<p>About time I got around to it</p>
+<h2 id="table-of-content">Table of content</h2>
+<ul>
+<li>
+<p><a href="https://retr0ville.github.io/notes/alienware-keyboard-driver-fix/#alienware-keyboard-driver-fix">Alienware Keyboard Driver Fix</a></p>
+</li>
+<li>
+<p><a href="https://retr0ville.github.io/notes/alienware-keyboard-driver-fix/#background">Background</a></p>
+</li>
+</ul>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+<h3 id="usb-descriptor-failed-device-fix">USB Descriptor Failed Device Fix</h3>
+<blockquote>
+<p>A Windows startup tool that automatically detects USB devices with "Device Descriptor Request
+Failed" errors (Code 43), prompts you to uninstall them, and then puts the PC to sleep and wakes it
+back up.</p>
+</blockquote>
+<h2 id="background">Background</h2>
+<p>The Alienware M16 R4 has a persistent issue where the keyboard randomly stops working after a restart due to a race condition in the way it loads up USB drivers. I was able to figure out a fix which involves uninstalling the failing USB driver and then putting the device to sleep and waking it up. This program is a way for me to automate and run that process in the background so I won't have to think about it.</p>
+<p>Reference: <a class="external" rel="external" href="https://www.reddit.com/r/Alienware/comments/17nqy5y/alienware_m15_r4_keyboard_driver_issue_solution/">Alienware M15 R4 Keyboard Driver Issue</a></p>
+<h2 id="problem">Problem</h2>
+<p>When USB devices fail to initialize properly, Windows shows:</p>
+<ul>
+<li>"Windows has stopped this device because it has reported problems. (Code 43)"</li>
+<li>"A request for the USB device descriptor failed."</li>
+</ul>
+<h2 id="solution">Solution</h2>
+<p>This script runs on startup/login, detects the problematic drivers, and tries to fix it automatically.</p>
+<h2 id="features">Features</h2>
+<ul>
+<li>
+<p>Automatic detection of USB descriptor failed device</p>
+</li>
+<li>
+<p>GUI prompt for user confirmation</p>
+</li>
+<li>
+<p>Uninstall problematic device</p>
+</li>
+<li>
+<p>Put PC to sleep and auto-wake after 10 seconds</p>
+</li>
+<li>
+<p>Runs as scheduled task on startup and login</p>
+</li>
+</ul>
+<h2 id="files">Files</h2>
+<table><thead><tr><th>File</th><th>Purpose</th></tr></thead><tbody>
+<tr><td><code>UsbDescriptorFix.ps1</code></td><td>Main script</td></tr>
+<tr><td><code>Install-UsbFixStartup.ps1</code></td><td>Install as startup task</td></tr>
+<tr><td><code>Uninstall-UsbFixStartup.ps1</code></td><td>Remove startup task</td></tr>
+</tbody></table>
+<h2 id="installation">Installation</h2>
+<ol>
+<li>Right-click <code>Install-UsbFixStartup.ps1</code></li>
+<li>Select "Run with PowerShell"</li>
+<li>Approve the UAC prompt</li>
+</ol>
+<p>The script will now run automatically on Windows startup and when you log in.</p>
+<h2 id="manual-usage">Manual Usage</h2>
+<p>To run manually at any time:</p>
+<ol>
+<li>Right-click <code>UsbDescriptorFix.ps1</code></li>
+<li>Select "Run with PowerShell"</li>
+<li>Approve the UAC prompt</li>
+</ol>
+<h2 id="uninstallation">Uninstallation</h2>
+<p>To remove the automatic startup task:</p>
+<ol>
+<li>Right-click <code>Uninstall-UsbFixStartup.ps1</code></li>
+<li>Select "Run with PowerShell"</li>
+<li>Approve the UAC prompt</li>
+</ol>
+<p>Or run in PowerShell as Admin:</p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="powershell"><span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">Unregister-ScheduledTask</span><span style="color: #94E2D5;"> -</span><span>TaskName </span><span style="color: #A6E3A1;">&#39;UsbDescriptorFix_Startup&#39;</span><span style="color: #94E2D5;"> -</span><span>Confirm:$</span><span style="color: #F38BA8;">false</span></span></code></pre><h2 id="requirements">Requirements</h2>
+<ul>
+<li>Windows 10/11</li>
+<li>PowerShell 5.1+</li>
+<li>Administrator privileges (auto-elevates)</li>
+</ul>
+<h2 id="how-it-works">How It Works</h2>
+<ol>
+<li>
+<p>On startup/login, the script scans for USB devices with:</p>
+<ul>
+<li>Status: Error</li>
+<li>InstanceId starting with <code>USB\</code></li>
+<li>"Device Descriptor Request Failed" in name</li>
+<li>Problem code 43 (Code 43)</li>
+</ul>
+</li>
+<li>
+<p>If devices are found, a dialog appears showing:</p>
+<ul>
+<li>Number of affected devices</li>
+<li>Device names</li>
+</ul>
+</li>
+<li>
+<p>When you click "Uninstall &amp;&amp; Sleep":</p>
+<ul>
+<li>Devices are uninstalled using PowerShell PnP cmdlets</li>
+<li>A scheduled wake task is created</li>
+<li>PC enters sleep mode</li>
+<li>PC wakes after 10 seconds</li>
+<li>Wake task is automatically cleaned up</li>
+</ul>
+</li>
+</ol>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p><strong>Script doesn't detect devices:</strong></p>
+<ul>
+<li>Make sure you're running as Administrator</li>
+<li>Check Device Manager to confirm the device shows with "Error" status</li>
+</ul>
+<p><strong>Script closes immediately:</strong></p>
+<ul>
+<li>Run from PowerShell console to see error messages</li>
+<li>Check log file at: <code>%TEMP%\UsbDescriptorFix_Log.txt</code></li>
+</ul>
+<p><strong>Uninstall fails:</strong></p>
+<ul>
+<li>Some USB devices may be protected</li>
+<li>Try using Device Manager manually: Right-click device → Uninstall device</li>
+</ul>
+<h2 id="logs">Logs</h2>
+<p>Debug logs are written to:</p>
+<ul>
+<li><code>%TEMP%\UsbDescriptorFix_Log.txt</code> - Uninstall attempt logs</li>
+<li><code>%TEMP%\UsbDescriptorFix_Debug.txt</code> - Script execution debug info</li>
+</ul>
+<h2 id="github">GitHub</h2>
+<p><a class="external" rel="external" href="https://github.com/Retr0ville/alienware-m16-r4-Keyboard-Driver-Fix">Retr0ville/alienware-m16-r4-Keyboard-Driver-Fix: alienware-m16-r4 Keyboard Driver Fix</a></p>
+<h2 id="license">License</h2>
+<p>Free to use and modify.</p>
+
+        </div>
+      </div>
+      <div class="prompt" id="terminal"><input
+    type="text"
+    id="setter"
+    onkeydown="writeit(this, event);moveIt(this.value.length, event)"
+    onchange="writeit(this, event)"
+    onkeyup="writeit(this, event)"
+    onkeypress="writeit(this, event);"
+    >
+<label for="setter" id="writer"> </label><b class="cursor" id="cursor"></b></div>
+    </main>
+  </body>
+
+</html>
